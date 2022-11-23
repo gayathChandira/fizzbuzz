@@ -2,7 +2,28 @@ import 'package:flutter/material.dart';
 
 class ListSquare extends StatelessWidget {
   final String child;
-  const ListSquare({required this.child});
+
+  ListSquare({required this.child});
+  final List<Color> cList = [];
+  List<Color> getTextColor() {
+    if (child == "Fizz") {
+      cList.add(Colors.deepOrange.shade900);
+      cList.add(Colors.green.shade100);
+      return cList;
+    } else if (child == "Buzz") {
+      cList.add(Colors.purple.shade900);
+      cList.add(Colors.green.shade100);
+      return cList;
+    } else if (child == "FizzBuzz") {
+      cList.add(Colors.blue.shade900);
+      cList.add(Colors.green.shade100);
+      return cList;
+    } else {
+      cList.add(Colors.white);
+      cList.add(Colors.green);
+      return cList;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +32,15 @@ class ListSquare extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: const BorderRadius.all(Radius.circular(3)),
-          color: Colors.green[400],
+          color: getTextColor()[1],
         ),
         height: 30,
         child: Center(
           child: Text(
             child,
-            style: const TextStyle(
+            style: TextStyle(
               fontSize: 18,
-              color: Colors.white,
+              color: getTextColor()[0],
               fontFamily: 'Montserrat',
             ),
           ),

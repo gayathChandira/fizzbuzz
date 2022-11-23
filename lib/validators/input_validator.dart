@@ -1,3 +1,4 @@
+// Validates the user input
 class InputValidator {
   static String? validateInput(String? value) {
     if (value == null || value.isEmpty) {

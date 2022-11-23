@@ -2,6 +2,7 @@ import 'package:first_app/fizzbuzz.dart';
 import 'package:first_app/square.dart';
 import 'package:first_app/validators/input_validator.dart';
 import 'package:first_app/widgets/change_theme_widget.dart';
+import 'package:first_app/widgets/dialog_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic/flutter_neumorphic.dart';
@@ -25,7 +26,15 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: const Text("FizzBuzz"),
         centerTitle: true,
+        leading: GestureDetector(
+          onTap: () {
+            // show info alert
+            const DialogWidget().createAleartDialog(context);
+          },
+          child: const Icon(Icons.info_outline_rounded),
+        ),
         actions: [
+          // toggel the dark mode
           ChangeThemeWidget(),
         ],
       ),
