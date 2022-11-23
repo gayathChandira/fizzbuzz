@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(FizzBuzzApp());
 }
 
-class MyApp extends StatelessWidget {
+class FizzBuzzApp extends StatelessWidget {
+  const FizzBuzzApp({super.key});
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) => ChangeNotifierProvider(

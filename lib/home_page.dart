@@ -77,7 +77,9 @@ class _HomePageState extends State<HomePage> {
                 "GO",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 35,
+                  fontFamily: 'Montserrat',
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
@@ -91,7 +93,7 @@ class _HomePageState extends State<HomePage> {
                 itemCount: litems.length,
                 shrinkWrap: true,
                 itemBuilder: (context, index) {
-                  return MySquare(
+                  return ListSquare(
                     child: litems[index],
                   );
                 },

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class MySquare extends StatelessWidget {
+class ListSquare extends StatelessWidget {
   final String child;
-  MySquare({required this.child});
+  const ListSquare({required this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +20,7 @@ class MySquare extends StatelessWidget {
             style: const TextStyle(
               fontSize: 18,
               color: Colors.white,
+              fontFamily: 'Montserrat',
             ),
           ),
         ),
